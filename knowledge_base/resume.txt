@@ -1,0 +1,1751 @@
+GENERALIZED RESUME ATS AND JOB MATCHING KNOWLEDGE BASE
+
+VERSION: 1.0
+
+PURPOSE
+
+This knowledge base provides generalized rules for analyzing resumes, evaluating ATS compatibility, extracting skills, matching candidates against job descriptions, identifying gaps, and generating resume improvement recommendations.
+
+The knowledge base is technology-agnostic.
+
+It must not assume that one technology stack, programming language, framework, cloud platform, or professional domain is inherently better than another.
+
+Examples such as Python, Java, React, AWS, RAG, LangChain, SQL, Kubernetes, Salesforce, SAP, or other technologies are examples only. They must not be treated as universal requirements.
+
+The target job description determines which technologies, skills, qualifications, and experiences are relevant.
+
+CORE PRINCIPLE
+
+The knowledge base defines HOW a resume should be evaluated.
+
+The job description defines WHAT the employer is looking for.
+
+The candidate resume defines WHAT the candidate has.
+
+The matching engine compares the candidate against the target job.
+
+GENERAL EVALUATION FLOW
+
+1. Parse the resume.
+2. Detect resume sections.
+3. Extract candidate information.
+4. Extract skills and technologies.
+5. Extract work experience.
+6. Extract projects.
+7. Extract education.
+8. Extract certifications.
+9. Extract achievements.
+10. Detect formatting and parsing issues.
+11. If a job description is available, parse the job description.
+12. Extract required qualifications.
+13. Extract required skills.
+14. Extract preferred skills.
+15. Extract responsibilities.
+16. Extract domain requirements.
+17. Normalize terminology.
+18. Match candidate information against job requirements.
+19. Evaluate evidence supporting candidate skills.
+20. Calculate separate resume and job-match scores.
+21. Generate specific recommendations.
+
+IMPORTANT SCORING PRINCIPLE
+
+Do not use keyword count as the primary measure of resume quality.
+
+A resume with many keywords but little supporting evidence should not automatically receive a higher score than a resume with fewer but highly relevant and strongly supported skills.
+
+Evaluate:
+
+* Relevance
+* Evidence
+* Context
+* Recency
+* Importance to the job
+* Candidate experience level
+* Job requirements
+* Resume structure
+* ATS readability
+
+==================================================
+SECTION 1: RESUME STRUCTURE
+===========================
+
+A professional resume may contain the following sections:
+
+* Professional Header
+* Professional Summary
+* Objective
+* Work Experience
+* Professional Experience
+* Education
+* Skills
+* Technical Skills
+* Projects
+* Certifications
+* Awards
+* Achievements
+* Publications
+* Volunteer Experience
+* Professional Affiliations
+* Languages
+* Additional Information
+
+Not every resume requires every section.
+
+Section importance depends on:
+
+* Target position
+* Candidate experience level
+* Industry
+* Job requirements
+* Career stage
+* Candidate background
+
+Do not penalize a resume simply because an optional section is absent.
+
+==================================================
+SECTION 2: PROFESSIONAL HEADER
+==============================
+
+The professional header identifies the candidate and provides contact information.
+
+Common information includes:
+
+* Full name
+* Phone number
+* Email address
+* Location
+* LinkedIn
+* GitHub
+* Portfolio
+* Personal website
+
+ATS-friendly header rules:
+
+* Use selectable text.
+* Keep contact information clearly identifiable.
+* Use a professional email address.
+* Avoid placing critical information inside images.
+* Avoid replacing text with icons only.
+* Avoid excessive decorative elements.
+
+A missing LinkedIn, GitHub, or portfolio should not automatically be treated as a resume defect because these profiles are role-dependent.
+
+==================================================
+SECTION 3: PROFESSIONAL SUMMARY
+===============================
+
+The professional summary provides a short overview of the candidate.
+
+A strong summary may contain:
+
+* Professional identity
+* Experience level
+* Primary domain
+* Relevant capabilities
+* Relevant technologies
+* Target role
+* Major accomplishments
+
+The summary should be:
+
+* Concise
+* Relevant
+* Specific
+* Consistent with the rest of the resume
+* Appropriate for the candidate's experience level
+
+Avoid generic claims such as:
+
+* Hardworking
+* Motivated
+* Passionate
+* Team player
+
+unless supported by meaningful context.
+
+A summary should not claim expertise that is unsupported elsewhere in the resume.
+
+Example:
+
+WEAK:
+
+"Highly motivated professional with excellent skills."
+
+BETTER:
+
+"Backend software engineer with experience developing REST APIs, distributed services, and database-driven applications."
+
+The exact technology should depend on the candidate and target role.
+
+==================================================
+SECTION 4: WORK EXPERIENCE
+==========================
+
+Work experience is one of the most important sections for experienced candidates.
+
+Each experience entry should ideally contain:
+
+* Job title
+* Employer
+* Location
+* Start date
+* End date or Present
+* Responsibilities
+* Accomplishments
+* Relevant technologies
+* Relevant tools
+* Relevant domain experience
+
+Recommended chronological order:
+
+Most recent position first.
+
+Older positions should receive less emphasis when they are no longer relevant to the target role.
+
+The resume should generally prioritize relevant experience.
+
+Do not automatically remove unrelated experience when the candidate has limited professional experience. Unrelated work can demonstrate transferable skills.
+
+==================================================
+SECTION 5: EXPERIENCE BULLET QUALITY
+====================================
+
+Strong experience bullets generally communicate:
+
+ACTION + TASK + CONTEXT + RESULT
+
+Example:
+
+"Developed an internal reporting application using REST APIs and database integrations, reducing manual reporting effort."
+
+An even stronger version may contain a truthful metric:
+
+"Developed an internal reporting application using REST APIs and database integrations, reducing manual reporting effort by 30%."
+
+Do not invent metrics.
+
+If a resume contains responsibilities but no measurable outcomes, the system may recommend adding metrics where accurate.
+
+Potential metrics include:
+
+* Percentage improvement
+* Cost reduction
+* Revenue impact
+* Time saved
+* Performance improvement
+* Latency reduction
+* Accuracy improvement
+* Number of users
+* Number of customers
+* Number of transactions
+* Number of projects
+* Team size
+* Volume of data
+* Number of systems supported
+
+==================================================
+SECTION 6: ACTION VERBS
+=======================
+
+Experience bullets should preferably begin with meaningful action verbs.
+
+Examples:
+
+* Developed
+* Designed
+* Implemented
+* Built
+* Created
+* Led
+* Managed
+* Automated
+* Optimized
+* Improved
+* Analyzed
+* Delivered
+* Deployed
+* Integrated
+* Migrated
+* Architected
+* Tested
+* Configured
+* Maintained
+* Reduced
+* Increased
+* Streamlined
+
+Avoid excessive repetition of the same action verb.
+
+==================================================
+SECTION 7: SKILLS
+=================
+
+Skills may include any relevant professional capability.
+
+Skills can be classified into categories such as:
+
+* Programming Languages
+* Frameworks
+* Libraries
+* Databases
+* Cloud Platforms
+* DevOps Tools
+* AI/ML Technologies
+* Data Technologies
+* Frontend Technologies
+* Backend Technologies
+* Mobile Technologies
+* Security Technologies
+* Testing Tools
+* Design Tools
+* Business Applications
+* Enterprise Platforms
+* Methodologies
+* Domain Knowledge
+* Soft Skills
+* Languages
+
+The categories are not exhaustive.
+
+The system should dynamically identify the candidate's actual technology stack rather than assuming a predefined stack.
+
+==================================================
+SECTION 8: TECHNOLOGY-AGNOSTIC SKILL MODEL
+==========================================
+
+A skill should be represented conceptually as:
+
+SKILL
+
+* Name
+* Category
+* Subcategory
+* Normalized name
+* Evidence
+* Evidence location
+* Proficiency indication
+* Recency
+* Context
+* Relationship to other skills
+
+Example:
+
+Skill:
+PostgreSQL
+
+Category:
+Database
+
+Evidence:
+"Designed PostgreSQL schemas for transactional applications."
+
+Evidence strength:
+Strong
+
+Another example:
+
+Skill:
+Python
+
+Category:
+Programming Language
+
+Evidence:
+"Developed data processing scripts in Python."
+
+Evidence strength:
+Strong
+
+==================================================
+SECTION 9: SKILL EVIDENCE
+=========================
+
+Skills should not all receive equal confidence.
+
+Recommended evidence levels:
+
+LEVEL 0: NOT FOUND
+
+The skill does not appear in the resume.
+
+LEVEL 1: KEYWORD ONLY
+
+The skill appears only in a skills list.
+
+Example:
+
+Skills:
+Python, Docker, AWS
+
+No additional evidence.
+
+LEVEL 2: CONTEXTUAL MENTION
+
+The skill appears in a project, experience description, certification, or other context.
+
+Example:
+
+"Used Docker for application deployment."
+
+LEVEL 3: APPLIED SKILL
+
+The candidate describes meaningful implementation or usage.
+
+Example:
+
+"Containerized backend services using Docker and integrated them into the deployment pipeline."
+
+LEVEL 4: APPLIED + MEASURABLE RESULT
+
+The skill is demonstrated with a measurable outcome.
+
+Example:
+
+"Containerized backend services using Docker, reducing deployment time by 40%."
+
+Evidence should increase confidence in a skill match.
+
+==================================================
+SECTION 10: SKILL CONSISTENCY
+=============================
+
+Compare skills across:
+
+* Summary
+* Skills section
+* Experience
+* Projects
+* Certifications
+* Education
+
+If a candidate claims advanced expertise in a technology but provides no supporting evidence, mark it as:
+
+POSSIBLY_UNSUPPORTED_SKILL
+
+Do not automatically conclude that the candidate is lying.
+
+Instead recommend:
+
+"Consider adding evidence of this skill through relevant experience, projects, certifications, or coursework if applicable."
+
+==================================================
+SECTION 11: PROJECTS
+====================
+
+Projects can provide strong evidence of practical skills.
+
+Projects are especially useful for:
+
+* Students
+* Recent graduates
+* Career changers
+* Candidates with limited professional experience
+* Technical candidates
+* Candidates transitioning between technologies
+
+A strong project description may include:
+
+* Project name
+* Problem
+* Candidate contribution
+* Technologies
+* Architecture
+* Methodology
+* Implementation
+* Result
+* Deployment
+* Users or scale
+
+Example:
+
+PROJECT:
+Customer Support Application
+
+DESCRIPTION:
+Built a customer support application that automates ticket routing and provides searchable customer records.
+
+TECHNOLOGIES:
+Candidate's actual technologies.
+
+Do not require projects when the candidate already has substantial relevant professional experience.
+
+==================================================
+SECTION 12: EDUCATION
+=====================
+
+Education entries may contain:
+
+* Degree
+* Institution
+* Location
+* Major
+* Minor
+* Graduation year
+* GPA
+* Honors
+* Relevant coursework
+* Academic achievements
+
+Education should generally be listed in reverse chronological order.
+
+For recent graduates, education may receive greater prominence.
+
+For experienced professionals, work experience generally receives greater prominence.
+
+Do not penalize a candidate merely because GPA is absent.
+
+Do not recommend adding GPA unless it benefits the candidate.
+
+==================================================
+SECTION 13: CERTIFICATIONS
+==========================
+
+Certification records may contain:
+
+* Certification name
+* Issuing organization
+* Issue date
+* Expiration date
+* Credential ID
+* Credential URL
+
+Certification relevance should be evaluated against the target role.
+
+A certification unrelated to the target job should not significantly increase job-match score.
+
+Expired certifications should be identified when expiration information is available.
+
+==================================================
+SECTION 14: ATS PARSING
+=======================
+
+ATS-friendly resumes should be easy for software to parse.
+
+Positive characteristics include:
+
+* Clear section headings
+* Standard terminology
+* Consistent dates
+* Clear job titles
+* Clear company names
+* Plain text
+* Readable bullet points
+* Consistent chronology
+* Text-based contact information
+* Conventional resume structure
+
+Potential parsing risks include:
+
+* Text embedded in images
+* Important information inside graphics
+* Complex tables
+* Excessive columns
+* Decorative layouts
+* Skill bars
+* Icons replacing text
+* Unusual fonts
+* Important information hidden in headers or footers
+* Excessive symbols
+* Infographic-style resumes
+
+==================================================
+SECTION 15: SECTION DETECTION
+=============================
+
+Recognize common variations of section names.
+
+SUMMARY:
+
+* Summary
+* Professional Summary
+* Profile
+* Professional Profile
+* Career Summary
+* Objective
+
+EXPERIENCE:
+
+* Experience
+* Work Experience
+* Professional Experience
+* Employment History
+* Career History
+
+EDUCATION:
+
+* Education
+* Academic Background
+* Academic Qualifications
+
+SKILLS:
+
+* Skills
+* Technical Skills
+* Core Skills
+* Technical Competencies
+* Areas of Expertise
+
+PROJECTS:
+
+* Projects
+* Selected Projects
+* Personal Projects
+* Academic Projects
+
+CERTIFICATIONS:
+
+* Certifications
+* Professional Certifications
+* Certifications and Licenses
+
+==================================================
+SECTION 16: DATE NORMALIZATION
+==============================
+
+Recognize common date formats.
+
+Examples:
+
+January 2024 - Present
+
+Jan 2024 - Present
+
+01/2024 - Present
+
+2024 - Present
+
+January 2022 - December 2024
+
+The parser should normalize dates internally.
+
+Recommended internal representation:
+
+start_date
+end_date
+current
+
+Different but unambiguous date formats should not automatically reduce ATS compatibility.
+
+==================================================
+SECTION 17: JOB DESCRIPTION ANALYSIS
+====================================
+
+When a job description is available, extract:
+
+1. Required qualifications
+2. Required skills
+3. Preferred skills
+4. Responsibilities
+5. Experience requirements
+6. Education requirements
+7. Certifications
+8. Domain knowledge
+9. Tools and technologies
+10. Soft skills
+11. Seniority requirements
+12. Location requirements when relevant
+13. Industry requirements
+
+Job requirements should be classified by importance.
+
+==================================================
+SECTION 18: REQUIRED VS PREFERRED SKILLS
+========================================
+
+REQUIRED SKILL:
+
+A skill explicitly presented as mandatory.
+
+Examples:
+
+"Required"
+"Must have"
+"Essential"
+"Minimum requirement"
+"Candidates must have"
+
+PREFERRED SKILL:
+
+A skill described as desirable but not mandatory.
+
+Examples:
+
+"Preferred"
+"Nice to have"
+"Bonus"
+"Plus"
+"Desired"
+
+Required skills should receive higher matching weight than preferred skills.
+
+==================================================
+SECTION 19: RESPONSIBILITY MATCHING
+===================================
+
+Do not only compare technologies.
+
+Compare responsibilities.
+
+Example job requirement:
+
+"Design and maintain REST APIs."
+
+Candidate evidence:
+
+"Developed and maintained REST APIs for internal services."
+
+Result:
+
+Strong responsibility match.
+
+A candidate may have a technology without having experience performing the responsibility associated with that technology.
+
+Therefore:
+
+TECHNOLOGY MATCH != RESPONSIBILITY MATCH
+
+Both should be evaluated independently.
+
+==================================================
+SECTION 20: KEYWORD NORMALIZATION
+=================================
+
+Normalize equivalent terminology before matching.
+
+Examples:
+
+"JavaScript"
+"JS"
+"ECMAScript"
+
+may map to:
+
+JAVASCRIPT
+
+Examples:
+
+"REST"
+"REST API"
+"RESTful API"
+"REST APIs"
+
+may map to:
+
+REST_API
+
+Examples:
+
+"Natural Language Processing"
+"NLP"
+
+may map to:
+
+NLP
+
+Examples:
+
+"Retrieval Augmented Generation"
+"Retrieval-Augmented Generation"
+"RAG"
+
+may map to:
+
+RAG
+
+Normalization is for matching purposes.
+
+The original resume wording should remain unchanged when generating recommendations unless the candidate explicitly requests rewriting.
+
+==================================================
+SECTION 21: EXACT VS RELATED SKILLS
+===================================
+
+Do not treat related technologies as exact matches.
+
+Example:
+
+Job:
+PostgreSQL
+
+Resume:
+MySQL
+
+Result:
+
+RELATED_DATABASE_SKILL
+
+Not:
+
+EXACT_MATCH
+
+Example:
+
+Job:
+React
+
+Resume:
+Angular
+
+Result:
+
+RELATED_FRONTEND_FRAMEWORK
+
+Not:
+
+EXACT_MATCH
+
+Example:
+
+Job:
+AWS
+
+Resume:
+Azure
+
+Result:
+
+RELATED_CLOUD_PLATFORM
+
+Not:
+
+EXACT_MATCH
+
+Example:
+
+Job:
+Python
+
+Resume:
+Python
+
+Result:
+
+EXACT_MATCH
+
+==================================================
+SECTION 22: SKILL MATCH CATEGORIES
+==================================
+
+Each target skill can be classified as:
+
+EXACT_MATCH
+
+The candidate has the same skill.
+
+NORMALIZED_MATCH
+
+Different wording represents the same skill.
+
+STRONG_CONCEPT_MATCH
+
+Different terminology represents substantially equivalent capability.
+
+RELATED_SKILL
+
+The candidate has a related but different skill.
+
+PARTIAL_MATCH
+
+Some aspect of the requirement is demonstrated.
+
+MISSING
+
+No evidence found.
+
+UNKNOWN
+
+Insufficient information to determine.
+
+==================================================
+SECTION 23: JOB MATCHING
+========================
+
+Job matching should consider:
+
+* Required skills
+* Preferred skills
+* Experience
+* Responsibilities
+* Education
+* Certifications
+* Domain knowledge
+* Seniority
+* Projects
+* Relevant accomplishments
+
+Suggested conceptual weighting:
+
+Required Skills:
+30 percent
+
+Experience Relevance:
+20 percent
+
+Responsibilities:
+15 percent
+
+Preferred Skills:
+10 percent
+
+Projects:
+10 percent
+
+Education and Certifications:
+5 percent
+
+Domain Alignment:
+5 percent
+
+Other relevant requirements:
+5 percent
+
+These weights are guidelines, not universal rules.
+
+If a particular job has unusual requirements, the matching engine may adjust weighting.
+
+==================================================
+SECTION 24: ATS COMPATIBILITY SCORE
+===================================
+
+ATS compatibility measures whether the resume is likely to be parsed reliably.
+
+Suggested dimensions:
+
+Parsing Structure:
+20 percent
+
+Section Recognition:
+15 percent
+
+Contact Information:
+10 percent
+
+Experience Structure:
+15 percent
+
+Education Structure:
+10 percent
+
+Skills Discoverability:
+10 percent
+
+Date Consistency:
+5 percent
+
+Formatting Simplicity:
+10 percent
+
+Keyword Organization:
+5 percent
+
+Total:
+100 percent
+
+==================================================
+SECTION 25: RESUME COMPLETENESS SCORE
+=====================================
+
+Suggested dimensions:
+
+Header:
+10 percent
+
+Summary:
+10 percent
+
+Experience:
+25 percent
+
+Skills:
+15 percent
+
+Education:
+10 percent
+
+Projects:
+10 percent
+
+Certifications:
+5 percent
+
+Achievements:
+5 percent
+
+Overall structure:
+10 percent
+
+Total:
+100 percent
+
+Optional sections should not create large penalties when they are not relevant to the candidate.
+
+==================================================
+SECTION 26: EVIDENCE QUALITY SCORE
+==================================
+
+Evaluate whether the resume demonstrates claimed capabilities.
+
+Consider:
+
+* Skills supported by experience
+* Skills supported by projects
+* Measurable accomplishments
+* Specific responsibilities
+* Technology context
+* Domain context
+* Recency
+* Consistency
+
+A resume containing a large skills list with no evidence should receive a lower evidence-quality score than a resume that demonstrates its skills clearly.
+
+==================================================
+SECTION 27: OVERALL SCORE
+=========================
+
+If a single overall score is required, it should combine multiple dimensions.
+
+Suggested model:
+
+ATS Compatibility:
+30 percent
+
+Job Match:
+40 percent
+
+Resume Completeness:
+20 percent
+
+Evidence Quality:
+10 percent
+
+Overall Score:
+
+ATS Compatibility x 0.30
++
+Job Match x 0.40
++
+Resume Completeness x 0.20
++
+Evidence Quality x 0.10
+
+The result should be labeled:
+
+ESTIMATED ATS / JOB COMPATIBILITY SCORE
+
+It should NOT be described as an official ATS score.
+
+Different companies use different ATS systems, configurations, ranking mechanisms, and recruiter workflows.
+
+==================================================
+SECTION 28: IMPORTANT SCORE SEPARATION
+======================================
+
+Never confuse resume quality with job compatibility.
+
+Example:
+
+A candidate may have an excellent resume but be a poor match for a particular job.
+
+Result:
+
+High ATS Compatibility
+Low Job Match
+
+Another candidate may have a poorly structured resume but possess most required skills.
+
+Result:
+
+Low ATS Compatibility
+High Potential Job Match
+
+These should remain separate metrics.
+
+==================================================
+SECTION 29: KEYWORD STUFFING
+============================
+
+Keyword stuffing occurs when keywords are added excessively without meaningful context.
+
+Indicators:
+
+* Repeated keywords
+* Unnaturally long skill lists
+* Job-description copying
+* Technologies appearing only in the skills section
+* Repeated keywords across every section
+* Irrelevant technologies
+* Large keyword blocks without evidence
+
+Example:
+
+Python | Python | Python | AWS | AWS | AWS | Java | Java
+
+This should trigger a quality warning.
+
+Do not recommend keyword stuffing as an ATS strategy.
+
+==================================================
+SECTION 30: KEYWORD PLACEMENT
+=============================
+
+A relevant skill is stronger when supported in meaningful sections.
+
+Suggested evidence priority:
+
+1. Relevant work experience
+2. Relevant project
+3. Professional summary
+4. Technical skills
+5. Certification
+6. Education
+
+A skill appearing only in the skills section should not receive the same evidence confidence as a skill demonstrated through experience.
+
+==================================================
+SECTION 31: UNSUPPORTED SKILLS
+==============================
+
+If a skill appears in the resume but has no supporting evidence, classify it as:
+
+SKILL_LISTED_WITHOUT_EVIDENCE
+
+Do not accuse the candidate of falsely claiming the skill.
+
+Recommendation:
+
+"If you have practical experience with this skill, consider demonstrating it in a relevant experience or project bullet."
+
+==================================================
+SECTION 32: MISSING SKILLS
+==========================
+
+If a job requires a skill and the resume contains no evidence:
+
+Classify:
+
+MISSING_REQUIRED_SKILL
+
+or:
+
+MISSING_PREFERRED_SKILL
+
+Recommendations must be conditional.
+
+Example:
+
+"If you genuinely have experience with Kubernetes, consider adding it to the relevant experience or project section."
+
+Never recommend falsely adding a skill.
+
+==================================================
+SECTION 33: CANDIDATE INTEREST VS CANDIDATE SKILLS
+==================================================
+
+The system should distinguish:
+
+CURRENT_SKILL
+
+A skill demonstrated by the candidate.
+
+INTEREST
+
+A technology/domain the candidate wants to pursue.
+
+EXPERIENCE
+
+A skill used professionally.
+
+PROJECT_EXPERIENCE
+
+A skill used in a project.
+
+CERTIFIED_SKILL
+
+A skill supported by a certification.
+
+LEARNING
+
+A technology the candidate is currently learning.
+
+TARGET_ROLE
+
+The role the candidate wants.
+
+Do not assume:
+
+INTEREST = EXPERIENCE
+
+Do not assume:
+
+LEARNING = PROFESSIONAL_EXPERIENCE
+
+Do not assume:
+
+RELATED_SKILL = EXACT_SKILL
+
+==================================================
+SECTION 34: TECHNOLOGY-AGNOSTIC EVALUATION
+==========================================
+
+The system must not prioritize technologies based on popularity.
+
+For example:
+
+Java is not inherently better than Python.
+
+Python is not inherently better than Java.
+
+AWS is not inherently better than Azure.
+
+React is not inherently better than Angular.
+
+PostgreSQL is not inherently better than MySQL.
+
+RAG is not inherently better than traditional search.
+
+The correct skill is determined by the target job and candidate context.
+
+==================================================
+SECTION 35: RESUME RECOMMENDATION RULES
+=======================================
+
+Recommendations should be:
+
+* Specific
+* Actionable
+* Evidence-based
+* Job-specific when a job description is available
+* Candidate-specific
+* Non-deceptive
+
+Bad recommendation:
+
+"Add more keywords."
+
+Better recommendation:
+
+"The job description emphasizes REST API development. If you have relevant experience, mention REST API development in the corresponding experience bullet and describe what you built or improved."
+
+Bad recommendation:
+
+"Add AWS."
+
+Better:
+
+"AWS is listed as a required skill in the target job. If you have AWS experience, make that experience visible in your relevant work or project section."
+
+==================================================
+SECTION 36: RESUME REWRITE SAFETY
+=================================
+
+The system must never fabricate:
+
+* Skills
+* Experience
+* Employment
+* Education
+* Certifications
+* Metrics
+* Job titles
+* Employers
+* Project results
+* Technologies
+* Responsibilities
+
+If information is missing, the system should identify the gap.
+
+Example:
+
+Missing metric:
+
+"Add a measurable result if you know the actual impact."
+
+Never generate:
+
+"Improved performance by 40 percent"
+
+unless the candidate has provided evidence for that number.
+
+==================================================
+SECTION 37: RECENCY
+===================
+
+Skill relevance can depend on recency.
+
+Recent use of a technology generally provides stronger evidence than very old usage.
+
+However, older experience should not automatically be ignored.
+
+Consider:
+
+* Years since use
+* Candidate seniority
+* Technology evolution
+* Job requirements
+* Whether the skill is foundational
+* Whether the candidate has continued related experience
+
+==================================================
+SECTION 38: SENIORITY MATCHING
+==============================
+
+Compare the candidate's experience level with the target role.
+
+Common levels:
+
+* Intern
+* Entry Level
+* Junior
+* Mid Level
+* Senior
+* Lead
+* Principal
+* Staff
+* Manager
+* Director
+* Executive
+
+Evaluate:
+
+* Years of experience
+* Scope of responsibility
+* Leadership
+* Ownership
+* System complexity
+* Decision-making
+* Mentoring
+* Team management
+
+Do not determine seniority from job title alone.
+
+==================================================
+SECTION 39: DOMAIN MATCHING
+===========================
+
+Technology match is only one part of job matching.
+
+Evaluate domain experience when relevant.
+
+Examples:
+
+* Healthcare
+* Banking
+* Finance
+* Retail
+* Manufacturing
+* Education
+* Telecommunications
+* Logistics
+* Insurance
+* Government
+* SaaS
+* E-commerce
+
+A candidate can have strong technical skills but limited domain experience.
+
+Do not treat lack of domain experience as lack of technical ability.
+
+==================================================
+SECTION 40: SOFT SKILLS
+=======================
+
+Soft skills may include:
+
+* Communication
+* Leadership
+* Collaboration
+* Problem solving
+* Stakeholder management
+* Negotiation
+* Adaptability
+* Time management
+* Mentoring
+
+Soft skills are harder to verify than technical skills.
+
+Evidence is stronger when demonstrated through experience.
+
+Example:
+
+Weak:
+
+"Strong leadership skills."
+
+Stronger:
+
+"Led a five-person engineering team through the migration of a legacy service."
+
+==================================================
+SECTION 41: ATS KEYWORD EXTRACTION STRATEGY
+===========================================
+
+When processing a job description:
+
+1. Extract explicit skills.
+2. Extract technologies.
+3. Extract tools.
+4. Extract qualifications.
+5. Extract responsibilities.
+6. Extract certifications.
+7. Extract domain terminology.
+8. Extract seniority requirements.
+9. Identify required versus preferred terms.
+10. Normalize terminology.
+11. Remove generic non-discriminative words.
+12. Build a weighted requirement set.
+
+Do not treat every word in a job description as a keyword.
+
+==================================================
+SECTION 42: HIGH-VALUE JOB REQUIREMENTS
+=======================================
+
+High-value requirements usually include:
+
+* Explicitly required skills
+* Required years of experience
+* Required certifications
+* Required degree
+* Required technologies
+* Major responsibilities
+* Required domain knowledge
+* Required leadership experience
+* Required language proficiency
+
+Generic words such as:
+
+* Professional
+* Excellent
+* Strong
+* Dynamic
+* Fast-paced
+
+should generally have low keyword-matching weight unless they are associated with measurable requirements.
+
+==================================================
+SECTION 43: MATCH EXPLANATION
+=============================
+
+The system should explain why a match was produced.
+
+Example:
+
+MATCH:
+Java
+
+Reason:
+"Java appears in the candidate's skills section and is also demonstrated in two professional experience bullets."
+
+Another:
+
+PARTIAL MATCH:
+Cloud deployment
+
+Reason:
+"The candidate demonstrates AWS experience, while the job description requests Azure. Both are cloud platforms, but they are not equivalent technologies."
+
+Another:
+
+MISSING:
+Kubernetes
+
+Reason:
+"No evidence of Kubernetes was found in the resume."
+
+==================================================
+SECTION 44: RECOMMENDED OUTPUT
+==============================
+
+The final analyzer should ideally return:
+
+ATS Compatibility Score
+
+Job Match Score
+
+Resume Completeness Score
+
+Evidence Quality Score
+
+Strengths
+
+Weaknesses
+
+Matched Requirements
+
+Partially Matched Requirements
+
+Missing Requirements
+
+Unsupported Skills
+
+Formatting Warnings
+
+Keyword Recommendations
+
+Experience Recommendations
+
+Project Recommendations
+
+Summary Recommendations
+
+Education Recommendations
+
+Certification Recommendations
+
+==================================================
+SECTION 45: EXAMPLE GENERAL OUTPUT
+==================================
+
+ATS COMPATIBILITY:
+87/100
+
+JOB MATCH:
+79/100
+
+RESUME COMPLETENESS:
+91/100
+
+EVIDENCE QUALITY:
+82/100
+
+STRENGTHS:
+
+* Clear professional experience structure
+* Strong technical skill visibility
+* Relevant project evidence
+* Consistent employment dates
+
+PARTIAL MATCHES:
+
+* Cloud experience is present, but the specific platform requested by the job is different.
+* Database experience is present, but the requested database technology is not explicitly demonstrated.
+
+MISSING:
+
+* Required certification not found.
+
+IMPROVEMENTS:
+
+* Add evidence for the required cloud platform if the candidate has genuine experience.
+* Add measurable outcomes to two experience bullets.
+* Make the most relevant job responsibilities more explicit.
+
+==================================================
+SECTION 46: RAG CHUNKING GUIDELINES
+===================================
+
+The knowledge base should preferably be divided into semantic chunks.
+
+Recommended chunk categories:
+
+KB_001:
+Resume fundamentals
+
+KB_002:
+Resume sections
+
+KB_003:
+Professional header
+
+KB_004:
+Professional summary
+
+KB_005:
+Work experience
+
+KB_006:
+Experience bullet quality
+
+KB_007:
+Achievements and metrics
+
+KB_008:
+Skills
+
+KB_009:
+Projects
+
+KB_010:
+Education
+
+KB_011:
+Certifications
+
+KB_012:
+ATS parsing
+
+KB_013:
+ATS formatting
+
+KB_014:
+Section detection
+
+KB_015:
+Date normalization
+
+KB_016:
+Job description parsing
+
+KB_017:
+Required and preferred skills
+
+KB_018:
+Skill normalization
+
+KB_019:
+Exact versus related skills
+
+KB_020:
+Skill evidence
+
+KB_021:
+Keyword matching
+
+KB_022:
+Keyword stuffing
+
+KB_023:
+Candidate interest versus skills
+
+KB_024:
+Experience matching
+
+KB_025:
+Seniority matching
+
+KB_026:
+Domain matching
+
+KB_027:
+ATS scoring
+
+KB_028:
+Job matching
+
+KB_029:
+Resume completeness
+
+KB_030:
+Recommendation generation
+
+KB_031:
+Resume rewrite safety
+
+==================================================
+SECTION 47: RECOMMENDED METADATA
+================================
+
+Each chunk can contain metadata such as:
+
+document_type:
+resume_ats_knowledge_base
+
+category:
+ats
+
+topic:
+keyword_matching
+
+domain:
+general
+
+technology_specific:
+false
+
+version:
+1.0
+
+source_type:
+guideline
+
+The domain should remain "general" unless the chunk is intentionally an example or domain-specific rule.
+
+==================================================
+SECTION 48: DOMAIN-SPECIFIC EXAMPLES
+====================================
+
+Domain-specific resume examples may be stored separately from the generalized rules.
+
+Example metadata:
+
+document_type:
+resume_example
+
+domain:
+AI_ML
+
+role:
+AI_ML_ENGINEER
+
+Example:
+
+document_type:
+resume_example
+
+domain:
+SOFTWARE_ENGINEERING
+
+role:
+BACKEND_ENGINEER
+
+Example:
+
+document_type:
+resume_example
+
+domain:
+DESIGN
+
+role:
+UI_UX_DESIGNER
+
+Examples should demonstrate how general rules are applied.
+
+Examples must not be treated as universal requirements.
+
+==================================================
+SECTION 49: FINAL EVALUATION PRINCIPLE
+======================================
+
+The system should always distinguish between:
+
+RESUME QUALITY
+
+How well the resume is structured, readable, complete, evidence-based, and ATS-compatible.
+
+JOB MATCH
+
+How closely the candidate's actual background matches a particular job.
+
+CANDIDATE INTEREST
+
+What the candidate wants to pursue.
+
+SKILL EVIDENCE
+
+How strongly the resume demonstrates a skill.
+
+JOB REQUIREMENT
+
+What the employer is asking for.
+
+These concepts must not be conflated.
+
+==================================================
+SECTION 50: MASTER RULE
+=======================
+
+The resume analyzer must remain technology-neutral.
+
+Never assume that a specific programming language, framework, database, cloud provider, AI technology, design tool, enterprise platform, or methodology is universally required.
+
+The target job description determines relevance.
+
+The candidate resume determines evidence.
+
+The knowledge base determines evaluation methodology.
+
+The matching engine determines the degree of alignment.
+
+The system should explain its conclusions rather than relying only on a numerical score.
